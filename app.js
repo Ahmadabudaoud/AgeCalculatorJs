@@ -13,17 +13,49 @@
 
 // This functions should check the integrity of the parameters and pass true/false
 function checkParamsFn(year, month, day) {
-  // Write your code here
+  if (!Number.isInteger(year)) return false;
+  else if (!Number.isInteger(month)) return false;
+  else if (!Number.isInteger(day)) return false;
+  else return true;
+}
+console.log(checkParamsFn(1998, 7, 5));
+
+// // This functions checks if the person is or above 18 years of age, return true/false
+// function checkOverEighteenFn(year, month, day) {
+//   let yearx = new Date();
+//   let monthx = new Date();
+//   let dayx = new Date();
+//   if (yearx.getFullYear() < year + 18) return false;
+//   else if (yearx.getFullYear() > year + 18) return true;
+//   else if (monthx.getMonth() < month) return false;
+//   else if (monthx.getMonth() > month) return true;
+//   else if (dayx.getDate() > day) return false;
+//   else if (dayx.getDate() <= day) return true;
+// }
+// console.log(checkOverEighteenFn(2003, 5, 19));
+// function calculateAgeFn(year, month, day) {
+//   if (!checkParamsFn) return "error " ;
+//   else if (!checkOverEighteenFn) return "error :"
+//   else {
+//     let yearx = new Date();
+//     let monthx = new Date();
+//     let dayx = new Date();
+// let ageindays =
+// let ageinmonth =
+// let ageinyears =
+// function calculate_age(dob) { var diff_ms = Date.now() - dob.getTime(); var age_dt = new Date(diff_ms); return
+//   }
+// }
+function calculate_age(dob) {
+  var diff_ms = Date.now() - dob.getTime();
+  var age_dt = new Date(diff_ms);
+
+  return Math.abs(age_dt.getUTCFullYear() - 1970);
 }
 
-// This functions checks if the person is or above 18 years of age, return true/false
-function checkOverEighteenFn(year, month, day) {
-  // Write your code here
-}
+console.log(calculate_age(new Date(1982, 11, 4)));
 
-function calculateAgeFn(year, month, day) {
-  // Write your code here
-}
+console.log(calculate_age(new Date(2003, 5, 18)));
 
 // Look at the naming of the functions. it looks like salwaBaqer, where
 // the first letter of the first word is small, while the first letter of the
