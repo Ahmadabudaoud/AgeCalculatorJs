@@ -34,12 +34,11 @@ function checkOverEighteenFn(year, month, day) {
 }
 console.log(checkOverEighteenFn(2003, 5, 19));
 
-
 function calculateAgeFn(year, month, day) {
-  if (!checkParamsFn) return "error " ;
-  else if (!checkOverEighteenFn) return "error :"
+  if (!checkParamsFn) return "error ";
+  else if (!checkOverEighteenFn) return "error :";
   else {
-  
+  }
 }
 
 // Look at the naming of the functions. it looks like salwaBaqer, where
